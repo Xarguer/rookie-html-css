@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: charter;
     src: url(../fonts/charter-regular.otf);
     font-style: normal;
@@ -24,26 +24,52 @@
     src: url(../fonts/charter-bold-italic.otf);
     font-style: italic;
     font-weight: bold;
-}
+} */
 
-:root {
-    font-size: 18px;
-    --gray30: #212121;
-    --gray20: #212429;
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+
+:root {font-size: 16px;
+    --gray40: #212121;
+    --gray30: #212429;
+    --gray20: #424242;
     --gray10: #616161;
 }
 
-body {color: var(--gray30);
-    font-family: charter;
+body {color: var(--gray40);
+    font-family: "Roboto", sans-serif;
+    /* font-family: charter; */
 }
 
-a {color: var(--gray30);}
+a {color: var(--gray40);}
 
 header {font-size: 14px; color: var(--gray10);}
 
 header a {color: var(--gray10); text-decoration: none;}
 
-header a:hover {color: var(--gray30);}
+header a:hover {color: var(--gray40);}
 
 summary {font-weight: bold;}
 
@@ -51,4 +77,56 @@ h1 {font-size: 60px;}
 
 h2 {font-size: 32px;}
 
-h3 {font-size: 24px;}
+h3 {font-size: 24px; color: var(--gray20);}
+
+h3 ~ p {color: var(--gray20);}
+
+pre {background: #FEC62E;}
+
+.hero {
+    background-image: linear-gradient(to top, #ffffff22,transparent), url('../images/pattern.png');
+    height: 350px;
+}
+
+h3::before {
+    content: '';
+}
+
+h3::after {
+    content: '';
+    height: 4px;
+    background: var(--gray20);
+    display:  block;
+}
+
+/* #google-chrome::after {
+    content: '';
+    width: 902px;
+    height: 4px;
+    background: var(--gray20);
+    display: block;
+}
+
+#vsc::after {
+    content: '';
+    width: 228px;
+    height: 4px;
+    background: var(--gray20);
+    display: block;
+}
+
+#figma::after {
+    content: '';
+    width: 93px;
+    height: 4px;
+    background: var(--gray20);
+    display: block;
+}
+
+#github::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: var(--gray20);
+    display: block;
+} */
