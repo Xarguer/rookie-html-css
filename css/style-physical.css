@@ -127,10 +127,6 @@ blockquote span::before {
     position: relative;
 }
 
-.main {
-    border: solid red;
-}
-
 .wrapper {
     width: 902px;
     margin: auto;
