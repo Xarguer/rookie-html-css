@@ -22,8 +22,8 @@
     font-style: italic;
 }
   
-
-:root {font-size: 16px;
+:root {
+    font-size: 16px;
     --gray40: #212121;
     --gray30: #212429;
     --gray20: #424242;
@@ -36,11 +36,18 @@ body {
     margin: 0;
 }
 
-a {color: var(--gray40);}
+a {
+    color: var(--gray40);
+}
 
 header {
-    font-size: 14px; 
+    font-size: 14px;
+    line-height: 24px;
+    width: 188px;
     color: var(--gray10);
+    position: absolute;
+    top: 64px;
+    left: -232px;
 }
 
 header a {
@@ -48,34 +55,50 @@ header a {
     text-decoration: none;
 }
 
-header a:hover {color: var(--gray40);}
+header a:hover {
+    color: var(--gray40);
+}
 
-summary {font-weight: bold;}
+header li {
+    margin-bottom: 16px;
+}
+
+summary {
+    font-weight: bold;
+}
 
 h1 {
     font-size: 60px;
+    font-weight: normal;
     margin-top: 64px;
-    margin-bottom: 16px;}
+    margin-bottom: 16px;
+}
 
-h1 ~ p {margin-bottom: 64px;}
+h1 ~ p {
+    margin-bottom: 64px;
+}
 
-hr {margin: 64px 0;}
+hr {
+    margin: 64px 0;
+}
 
 h2 {
     font-size: 32px;
-    margin: 64px 0 40px;
     font-weight: normal;
+    margin: 64px 0 40px;
 }
 
 h3 {
     font-size: 24px;
+    font-weight: normal;
     color: var(--gray20);
     margin-top: 16px;
     margin-bottom: 24px;
-    font-weight: normal;
 }
 
-h3 ~ p {color: var(--gray20);}
+h3 ~ p {
+    color: var(--gray20);
+}
 
 pre {
     background: #FEC62E;
@@ -86,7 +109,7 @@ pre {
 
 blockquote {
     font-size: 24px;
-    line-height: 24px;
+    line-height: 32px;
     margin: 32px 0;
     padding-left: 16px;
     border-left: 4px solid var(--gray40);
@@ -97,7 +120,20 @@ blockquote span {
 }
 
 blockquote span::before {
-    content: '-';
+    content: '- ';
+}
+
+.header-content {
+    position: relative;
+}
+
+.main {
+    border: solid red;
+}
+
+.wrapper {
+    width: 902px;
+    margin: auto;
 }
 
 .hero {
@@ -105,12 +141,13 @@ blockquote span::before {
     height: 350px;
 }
 
-.section-content:first-of-type {
-    margin: 0;
-}
-
 .section-content {
     margin-top: 164px;
+    position: relative;
+}
+
+.section-content:first-of-type {
+    margin: 0;
 }
 
 .section-content ol li {
@@ -135,6 +172,8 @@ blockquote span::before {
 
 .section-content h3 {
     counter-increment: titlelist;
+    padding-bottom: 8px;
+    position: relative;
 }
 
 .section-content h3::before {
@@ -143,8 +182,11 @@ blockquote span::before {
 
 .section-content h3::after {
     content: '';
-    width: 32px;
+    width: 80px;
     height: 4px;
     background: var(--gray20);
     display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
