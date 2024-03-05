@@ -91,6 +91,7 @@ h1 {
 }
 
 h1 + p {
+    color: var(--white10);
     margin-block-end: 80px;
 }
 
@@ -140,7 +141,7 @@ pre {
     height: 350px;
 }
 
-blockquote {
+.section-content blockquote {
     background: #3A3539;
     font-size: 24px;
     font-weight: normal;
@@ -202,4 +203,50 @@ ul li {
 
 .section-content:first-of-type {
     margin: 0;
+}
+
+.slider-container {
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.video {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+    text-align: center;
+    margin-block-start: 16px;
+}
+
+.slider-bullet {
+    display: inline-block;
+    inline-size: 16px;
+    block-size: 16px;
+    border-radius: 50%;
+    background: white;
+}
+
+.bottom-background {
+    background: #FFFFFF;
+    height: 174px;
+}
+
+.bottom-background blockquote {
+    color: #251F24;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.section-content:last-child h2 {
+    font-size: 24px;
+    font-weight: 400;
 }
