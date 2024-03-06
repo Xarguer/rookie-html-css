@@ -43,23 +43,11 @@ a {
     color: #157EFB;
 }
 
-.header {
-    position: sticky;
-    inset-block-start: 0;
-}
-
-.header-content {
-    position: relative;
-    inset-block-start: 64px;
-}
-
 header {
+    margin-block-start: 20px;
+    padding: 20px;
     font-size: 14px;
     color: var(--white20);
-    position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: -188px;
-    inline-size: 188px;
 }
 
 header li {
@@ -84,9 +72,9 @@ summary {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 40px;
     font-weight: bold;
-    margin-block-start: 64px;
+    margin-block-start: 0;
     margin-block-end: 16px;
 }
 
@@ -138,7 +126,7 @@ pre {
 
 .hero {
     background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
-    height: 350px;
+    block-size: 50px;
 }
 
 .section-content blockquote {
@@ -232,6 +220,61 @@ ul li {
     block-size: 16px;
     border-radius: 50%;
     background: white;
+}
+
+.form input {
+    inline-size: 100%;
+    border: 1px solid var(--white20);
+    box-sizing: border-box;
+    background: #251F24;
+    color: var(--white20);
+    font-size: 16px;
+    border-radius: 8px;
+    padding-block: 12px;
+    padding-inline: 16px;
+    display: block;
+    margin-block-end: 24px;
+}
+
+.form input::placeholder {
+    color: var(--white10);
+}
+
+.form input[type="submit"] {
+    background: #157EFB;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media screen and (min-width:1366px) {
+    h1 {
+        font-size: 64px;
+        font-weight: bold;
+        margin-block-start: 64px;
+        margin-block-end: 16px;
+    }
+    
+    .hero {
+        block-size: 350px;
+    }
+    
+    .header {
+        position: sticky;
+        inset-block-start: 0;
+    }
+    
+    .header-content {
+        position: relative;
+        inset-block-start: 64px;
+    }
+    
+    header {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -188px;
+        inline-size: 188px;
+    }
 }
 
 .bottom-background {
