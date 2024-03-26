@@ -267,6 +267,7 @@ ul li {
     .header-content {
         position: relative;
         inset-block-start: 64px;
+        inset-inline-start: -64px;
     }
     
     header {
